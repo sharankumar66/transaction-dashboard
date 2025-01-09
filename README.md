@@ -6,12 +6,8 @@ This project demonstrates a MERN stack application that interacts with a third-p
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Setup Instructions](#setup-instructions)
-- [API Documentation](#api-documentation)
 - [Frontend Features](#frontend-features)
 - [Swagger Documentation](#swagger-documentation)
-- [Future Improvements](#future-improvements)
-- [License](#license)
-
 ---
 
 ## Features
@@ -76,3 +72,15 @@ Go to frontend directory
 ## Access the Application
 Backend APIs: http://localhost:5000/api
 Frontend: http://localhost:3000
+
+## Frontend Features
+- Table: Displays transactions with pagination, search, and month selection.
+- Statistics Box: Shows total sales, sold items, and unsold items for the selected month.
+- Charts:
+   - Bar chart for price ranges.
+   - Pie chart for categories.
+
+## Swagger Documentation
+You can view and interact with the backend API documentation at http://localhost:5000/api-docs/.
+
+
