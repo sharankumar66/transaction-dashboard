@@ -54,6 +54,8 @@ This project demonstrates a MERN stack application that interacts with a third-p
 ### Install dependencies
 ### `npm install`
 ### `PORT=5000
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>.mongodb.net/<database>?retryWrites=true&w=majority
+Add Your MongoCli Details here in .env file
 MONGO_URI=mongodb://localhost:27017/transactions
 THIRD_PARTY_API_URL=https://s3.amazonaws.com/roxiler.com/product_transaction.json
 `
