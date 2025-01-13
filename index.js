@@ -23,16 +23,14 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${PORT}/api`, // URL for accessing the API
+        url: `http://localhost:${PORT}/api`, 
       },
     ],
   },
-  apis: ["./routes/*.js"], // Path to your route files with the Swagger comments
-};
+  apis: ["./routes/*.js"], 
 
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
 
-// Serve Swagger UI at /api-docs
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Middleware
@@ -40,7 +38,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-const MONGO_URI = process.env.MONGO_URI; // Use environment variable
+const MONGO_URI = process.env.MONGO_URI; 
 
 mongoose
   .connect(MONGO_URI, {
@@ -50,7 +48,6 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error: ", err));
 
-// Use transaction routes
 app.use("/api", transactionRoutes);
 
 app.listen(PORT, () => {
